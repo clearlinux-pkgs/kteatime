@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBB463350D6EF31EF (heiko@shruuf.de)
 #
 Name     : kteatime
-Version  : 21.08.2
-Release  : 32
-URL      : https://download.kde.org/stable/release-service/21.08.2/src/kteatime-21.08.2.tar.xz
-Source0  : https://download.kde.org/stable/release-service/21.08.2/src/kteatime-21.08.2.tar.xz
-Source1  : https://download.kde.org/stable/release-service/21.08.2/src/kteatime-21.08.2.tar.xz.sig
+Version  : 21.08.3
+Release  : 33
+URL      : https://download.kde.org/stable/release-service/21.08.3/src/kteatime-21.08.3.tar.xz
+Source0  : https://download.kde.org/stable/release-service/21.08.3/src/kteatime-21.08.3.tar.xz
+Source1  : https://download.kde.org/stable/release-service/21.08.3/src/kteatime-21.08.3.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GFDL-1.2 GPL-2.0
@@ -68,15 +68,15 @@ locales components for the kteatime package.
 
 
 %prep
-%setup -q -n kteatime-21.08.2
-cd %{_builddir}/kteatime-21.08.2
+%setup -q -n kteatime-21.08.3
+cd %{_builddir}/kteatime-21.08.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1634336668
+export SOURCE_DATE_EPOCH=1636051781
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -92,11 +92,11 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1634336668
+export SOURCE_DATE_EPOCH=1636051781
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kteatime
-cp %{_builddir}/kteatime-21.08.2/COPYING %{buildroot}/usr/share/package-licenses/kteatime/7c203dee3a03037da436df03c4b25b659c073976
-cp %{_builddir}/kteatime-21.08.2/COPYING.DOC %{buildroot}/usr/share/package-licenses/kteatime/0c4be15f5177aafffe980ca09c0f4ca6ed741f43
+cp %{_builddir}/kteatime-21.08.3/COPYING %{buildroot}/usr/share/package-licenses/kteatime/7c203dee3a03037da436df03c4b25b659c073976
+cp %{_builddir}/kteatime-21.08.3/COPYING.DOC %{buildroot}/usr/share/package-licenses/kteatime/0c4be15f5177aafffe980ca09c0f4ca6ed741f43
 pushd clr-build
 %make_install
 popd
