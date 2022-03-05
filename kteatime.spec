@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xBB463350D6EF31EF (heiko@shruuf.de)
 #
 Name     : kteatime
-Version  : 21.12.2
-Release  : 36
-URL      : https://download.kde.org/stable/release-service/21.12.2/src/kteatime-21.12.2.tar.xz
-Source0  : https://download.kde.org/stable/release-service/21.12.2/src/kteatime-21.12.2.tar.xz
-Source1  : https://download.kde.org/stable/release-service/21.12.2/src/kteatime-21.12.2.tar.xz.sig
+Version  : 21.12.3
+Release  : 37
+URL      : https://download.kde.org/stable/release-service/21.12.3/src/kteatime-21.12.3.tar.xz
+Source0  : https://download.kde.org/stable/release-service/21.12.3/src/kteatime-21.12.3.tar.xz
+Source1  : https://download.kde.org/stable/release-service/21.12.3/src/kteatime-21.12.3.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : CC0-1.0 GFDL-1.2 GPL-2.0
@@ -68,15 +68,15 @@ locales components for the kteatime package.
 
 
 %prep
-%setup -q -n kteatime-21.12.2
-cd %{_builddir}/kteatime-21.12.2
+%setup -q -n kteatime-21.12.3
+cd %{_builddir}/kteatime-21.12.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1644001246
+export SOURCE_DATE_EPOCH=1646523453
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -92,12 +92,12 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1644001246
+export SOURCE_DATE_EPOCH=1646523453
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kteatime
-cp %{_builddir}/kteatime-21.12.2/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/kteatime/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0
-cp %{_builddir}/kteatime-21.12.2/LICENSES/GFDL-1.2-or-later.txt %{buildroot}/usr/share/package-licenses/kteatime/ee03d68f6be20b170e5ea5d114d6acafb3f2d1dc
-cp %{_builddir}/kteatime-21.12.2/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kteatime/3e8971c6c5f16674958913a94a36b1ea7a00ac46
+cp %{_builddir}/kteatime-21.12.3/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/kteatime/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0
+cp %{_builddir}/kteatime-21.12.3/LICENSES/GFDL-1.2-or-later.txt %{buildroot}/usr/share/package-licenses/kteatime/ee03d68f6be20b170e5ea5d114d6acafb3f2d1dc
+cp %{_builddir}/kteatime-21.12.3/LICENSES/GPL-2.0-or-later.txt %{buildroot}/usr/share/package-licenses/kteatime/3e8971c6c5f16674958913a94a36b1ea7a00ac46
 pushd clr-build
 %make_install
 popd
