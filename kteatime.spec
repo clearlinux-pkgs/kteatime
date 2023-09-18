@@ -6,11 +6,11 @@
 # Source0 file verified with key 0xBB463350D6EF31EF (heiko@shruuf.de)
 #
 Name     : kteatime
-Version  : 23.08.0
-Release  : 56
-URL      : https://download.kde.org/stable/release-service/23.08.0/src/kteatime-23.08.0.tar.xz
-Source0  : https://download.kde.org/stable/release-service/23.08.0/src/kteatime-23.08.0.tar.xz
-Source1  : https://download.kde.org/stable/release-service/23.08.0/src/kteatime-23.08.0.tar.xz.sig
+Version  : 23.08.1
+Release  : 57
+URL      : https://download.kde.org/stable/release-service/23.08.1/src/kteatime-23.08.1.tar.xz
+Source0  : https://download.kde.org/stable/release-service/23.08.1/src/kteatime-23.08.1.tar.xz
+Source1  : https://download.kde.org/stable/release-service/23.08.1/src/kteatime-23.08.1.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : CC0-1.0 GFDL-1.2 GPL-2.0
@@ -72,15 +72,15 @@ locales components for the kteatime package.
 
 
 %prep
-%setup -q -n kteatime-23.08.0
-cd %{_builddir}/kteatime-23.08.0
+%setup -q -n kteatime-23.08.1
+cd %{_builddir}/kteatime-23.08.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1693008943
+export SOURCE_DATE_EPOCH=1695062339
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -113,7 +113,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1693008943
+export SOURCE_DATE_EPOCH=1695062339
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kteatime
 cp %{_builddir}/kteatime-%{version}/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/kteatime/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0 || :
@@ -177,6 +177,8 @@ popd
 /usr/share/doc/HTML/sv/kteatime/config.png
 /usr/share/doc/HTML/sv/kteatime/index.cache.bz2
 /usr/share/doc/HTML/sv/kteatime/index.docbook
+/usr/share/doc/HTML/tr/kteatime/index.cache.bz2
+/usr/share/doc/HTML/tr/kteatime/index.docbook
 /usr/share/doc/HTML/uk/kteatime/config.png
 /usr/share/doc/HTML/uk/kteatime/index.cache.bz2
 /usr/share/doc/HTML/uk/kteatime/index.docbook
