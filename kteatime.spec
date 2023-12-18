@@ -8,11 +8,11 @@
 # Source0 file verified with key 0xBB463350D6EF31EF (heiko@shruuf.de)
 #
 Name     : kteatime
-Version  : 23.08.3
-Release  : 60
-URL      : https://download.kde.org/stable/release-service/23.08.3/src/kteatime-23.08.3.tar.xz
-Source0  : https://download.kde.org/stable/release-service/23.08.3/src/kteatime-23.08.3.tar.xz
-Source1  : https://download.kde.org/stable/release-service/23.08.3/src/kteatime-23.08.3.tar.xz.sig
+Version  : 23.08.4
+Release  : 61
+URL      : https://download.kde.org/stable/release-service/23.08.4/src/kteatime-23.08.4.tar.xz
+Source0  : https://download.kde.org/stable/release-service/23.08.4/src/kteatime-23.08.4.tar.xz
+Source1  : https://download.kde.org/stable/release-service/23.08.4/src/kteatime-23.08.4.tar.xz.sig
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : CC0-1.0 GFDL-1.2 GPL-2.0
@@ -74,15 +74,15 @@ locales components for the kteatime package.
 
 
 %prep
-%setup -q -n kteatime-23.08.3
-cd %{_builddir}/kteatime-23.08.3
+%setup -q -n kteatime-23.08.4
+cd %{_builddir}/kteatime-23.08.4
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1702006873
+export SOURCE_DATE_EPOCH=1702937425
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -141,7 +141,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1702006873
+export SOURCE_DATE_EPOCH=1702937425
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/kteatime
 cp %{_builddir}/kteatime-%{version}/LICENSES/CC0-1.0.txt %{buildroot}/usr/share/package-licenses/kteatime/82da472f6d00dc5f0a651f33ebb320aa9c7b08d0 || :
